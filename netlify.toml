@@ -1,19 +1,8 @@
 [build]
-  command = "npm ci && npm run docs:build"
+
   publish = "docs/.vitepress/dist"
   functions = "netlify/functions"
 
 [build.environment]
   NODE_VERSION = "24"
 
-[[plugins]]
-  package = "@netlify/plugin-lighthouse"
-  
-[context.production.environment]
-  NODE_ENV = "production"
-
-# 清理缓存配置
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Cache-Control = "public, max-age=0, must-revalidate"
