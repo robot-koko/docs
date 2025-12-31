@@ -4,6 +4,7 @@ import { Icon } from "@iconify/vue";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: process.env.NODE_ENV === 'production' ? '/' : '/',
   title: "ROBOTKOKO博客",
   description: "机械与电子的完美结合，专注于雕刻机和3D打印，载算法如溪，物生机似链",
 
